@@ -54,7 +54,7 @@ const Hero = () => {
 					I'm a Web-Developer specializing in building (and
 					occasionally designing) exceptional digital experiences.
 					Currently, I'm focused on building responsive web
-					aoolications.
+					applications.
 				</p>
 				{/* resume button  */}
 				{/* <div>
