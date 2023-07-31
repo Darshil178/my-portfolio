@@ -45,8 +45,8 @@ const Hero = () => {
 							"Web-Developer",
 							"App-Developer",
 						]}
-						typeSpeed={120}
-						backSpeed={140}
+						typeSpeed={80}
+						backSpeed={80}
 						loop
 					/>
 				</h2>

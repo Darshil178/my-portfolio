@@ -16,10 +16,10 @@ const Work = () => {
 	return (
 		<div
 			name="work"
-			className="w-full  md:h-screen text-gray-300 bg-[#0a192f]"
+			className="w-full h-full md:h-screen text-gray-300 bg-[#0a192f] md:pb-0 pb-8"
 		>
 			<div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-				<div className="pb-8">
+				<div className="sm:pb-8">
 					<p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
 						Work
 					</p>
@@ -69,7 +69,7 @@ const Work = () => {
 					loop
 					navigation={true}
 					modules={[Navigation]}
-					className="mySwiper w-full h-[400px] md:!hidden block"
+					className="mySwiper w-full h-[300px] sm:h-[400px] md:!hidden block"
 				>
 					{project.map((item, index) => (
 						<SwiperSlide
@@ -77,10 +77,10 @@ const Work = () => {
 							spaceBetween={10}
 							key={index}
 							style={{ backgroundImage: `url(${item.image})` }}
-							className="group rounded-md flex justify-center text-center items-center w-full h-full bg-center bg-contain bg-no-repeat"
+							className="group rounded-md relative flex justify-center text-center items-center w-full h-full bg-center bg-cover sm:bg-contain bg-no-repeat"
 						>
 							{/* Hover effect for images */}
-							<div className="opacity-0 group-hover:opacity-100 duration-500 flex flex-col items-center justify-center w-full h-full">
+							<div className="opacity-0 relative group-hover:opacity-100 duration-500 flex flex-col items-center justify-center w-full h-full z-10">
 								<span className="text-2xl font bold text-white tracking-wider ">
 									{item.name}
 								</span>
@@ -105,6 +105,7 @@ const Work = () => {
 									</a>
 								</div>
 							</div>
+							<div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.8)] opacity-0 group-hover:opacity-100 duration-500 z-0" />
 						</SwiperSlide>
 					))}
 				</Swiper>
